@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+// App.js or main App file
+
+import React, { useState, useEffect, useContext } from 'react';
+import ReactGA from 'react-ga4';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
@@ -11,22 +14,27 @@ import FestivalGuide from './components/FestivalGuide';
 import PhotoGallery from './components/PhotoGallery';
 import ContactPage from './components/ContactPage';
 
-// Custom Router Context
+ReactGA.initialize('G-DMVD7BQXK1');
+
 const RouterContext = React.createContext();
 
-// Custom Router Provider
 const RouterProvider = ({ children }) => {
-  const [currentPath, setCurrentPath] = useState('/');
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   const navigate = (path) => {
     setCurrentPath(path);
     window.history.pushState({}, '', path);
+    ReactGA.send({ hitType: 'pageview', page: path });
   };
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname);
+      const path = window.location.pathname;
+      setCurrentPath(path);
+      ReactGA.send({ hitType: 'pageview', page: path });
     };
+
+    ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
@@ -39,30 +47,25 @@ const RouterProvider = ({ children }) => {
   );
 };
 
-// Custom useRouter hook
 const useRouter = () => {
-  const context = React.useContext(RouterContext);
+  const context = useContext(RouterContext);
   if (!context) {
     throw new Error('useRouter must be used within a RouterProvider');
   }
   return context;
 };
 
-// Route Component
 const Route = ({ path, component: Component }) => {
   const { currentPath, navigate } = useRouter();
   return currentPath === path ? <Component navigate={navigate} /> : null;
 };
 
-// Routes Component
 const Routes = ({ children }) => {
   return <>{children}</>;
 };
 
-// Layout Component
 const Layout = ({ children }) => {
-  // Add scrollbar hide styles to document head
-  React.useEffect(() => {
+  useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
       .scrollbar-hide {
@@ -74,7 +77,6 @@ const Layout = ({ children }) => {
       }
     `;
     document.head.appendChild(style);
-    
     return () => {
       document.head.removeChild(style);
     };
@@ -87,7 +89,6 @@ const Layout = ({ children }) => {
   );
 };
 
-// Main App Component
 const App = () => {
   const { currentPath, navigate } = useRouter();
 
@@ -112,7 +113,6 @@ const App = () => {
   );
 };
 
-// Root Component with Router Provider
 const AppWithRouter = () => (
   <RouterProvider>
     <App />

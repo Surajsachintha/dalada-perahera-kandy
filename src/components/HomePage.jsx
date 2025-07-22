@@ -14,11 +14,11 @@ const HomePage = ({ navigate }) => {
     },
     {
       id: 2,
-      title: "Procession Route",
-      description: "Interactive map showing the sacred procession route through Kandy.",
+      title: "Live parking availability",
+      description: "Live parking space availability during the festival period.",
       icon: <MapPin className="w-8 h-8" />,
       color: "from-purple-600 to-purple-800",
-      path: '/route'
+      path: '/parking'
     },
     {
       id: 3,
@@ -46,11 +46,11 @@ const HomePage = ({ navigate }) => {
     },
     {
       id: 6,
-      title: "Live Updates",
-      description: "Real-time updates and notifications during the festival period.",
+      title: "Real-Time Perahera Route",
+      description: "Real-time Perahera location updates during the festival period.",
       icon: <Clock className="w-8 h-8" />,
       color: "from-red-600 to-red-800",
-      path: '/'
+      path: '/live'
     }
   ];
 
@@ -62,7 +62,7 @@ const HomePage = ({ navigate }) => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+            backgroundImage: `url('https://lk.lakpura.com/cdn/shop/files/LK94909139-11-E.jpg?v=1689676827&width=3840')`
           }}
         ></div>
         
@@ -82,10 +82,10 @@ const HomePage = ({ navigate }) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button 
-                  onClick={() => navigate('/schedule')}
+                  onClick={() => navigate('/live')}
                   className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-xl"
                 >
-                  View Schedule
+                  Live Map
                 </button>
                 <button 
                   onClick={() => navigate('/guide')}

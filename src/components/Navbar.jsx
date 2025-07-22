@@ -46,8 +46,9 @@ const Navbar = ({ currentPath, navigate }) => {
             onClick={() => handleNavigation('/')} 
             className="flex items-center space-x-3 group"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg group-hover:shadow-xl">
-              <span className="text-gray-900 font-bold text-lg transition-transform duration-300 group-hover:scale-110">ශ්‍රී</span>
+            <div className="w-15 h-15 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg group-hover:shadow-xl">
+              {/* <span className="text-gray-900 font-bold text-lg transition-transform duration-300 group-hover:scale-110">ශ්‍රී</span> */}
+              <img src="/dalada-logo.png" alt="" />
             </div>
             <div className="transform transition-all duration-300 group-hover:translate-x-1">
               <h1 className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
