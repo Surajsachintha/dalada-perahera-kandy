@@ -8,12 +8,12 @@ const Navbar = ({ currentPath, navigate }) => {
   const navigationItems = [
     { id: 'home', label: 'Home', icon: <Home className="w-4 h-4" />, path: '/' },
     { id: 'live', label: 'Live', icon: <Navigation className="w-4 h-4" />, path: '/live' },
+    { id: 'spaces', label: 'Spaces', icon: <Users className="w-4 h-4" />, path: '/spaces' },
     { id: 'parking', label: 'Parking', icon: <Car className="w-4 h-4" />, path: '/parking' },
-    { id: 'schedule', label: 'Schedule', icon: <Calendar className="w-4 h-4" />, path: '/schedule' },
-    { id: 'route', label: 'Route', icon: <MapPin className="w-4 h-4" />, path: '/route' },
-    { id: 'events', label: 'Events', icon: <Users className="w-4 h-4" />, path: '/events' },
-    { id: 'guide', label: 'Guide', icon: <Info className="w-4 h-4" />, path: '/guide' },
-    { id: 'gallery', label: 'Gallery', icon: <Camera className="w-4 h-4" />, path: '/gallery' },
+    { id: 'importent', label: 'Importent Places', icon: <Info className="w-4 h-4" />, path: '/importent' },
+    { id: 'announcements', label: 'Announcements', icon: <Calendar className="w-4 h-4" />, path: '/announcements' },
+    { id: 'route', label: 'Daily Route', icon: <MapPin className="w-4 h-4" />, path: '/route' },  
+    // { id: 'gallery', label: 'Gallery', icon: <Camera className="w-4 h-4" />, path: '/gallery' },
     { id: 'contact', label: 'Contact', icon: <Phone className="w-4 h-4" />, path: '/contact' }
   ];
 
@@ -51,12 +51,7 @@ const Navbar = ({ currentPath, navigate }) => {
               <img src="/dalada-logo.png" alt="" />
             </div>
             <div className="transform transition-all duration-300 group-hover:translate-x-1">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                Sri Dalada Perahara
-              </h1>
-              <p className="text-gray-400 text-sm transition-colors duration-300 group-hover:text-gray-300">
-                Sacred Festival of Kandy
-              </p>
+              <img src="./name.png" alt="" className='w-60' />
             </div>
           </button>
 

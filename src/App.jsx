@@ -7,12 +7,12 @@ import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import LiveLocation from './components/LiveLocation';
 import ParkingSpaces from './components/ParkingSpaces';
-import FestivalSchedule from './components/FestivalSchedule';
 import ProcessionRoute from './components/ProcessionRoute';
-import CulturalEvents from './components/CulturalEvents';
-import FestivalGuide from './components/FestivalGuide';
 import PhotoGallery from './components/PhotoGallery';
 import ContactPage from './components/ContactPage';
+import LiveViwingSpaces from './components/LiveViwingSpaces';
+import ImportentPlaces from './components/ImportentPlaces';
+import SpecialAnnouncements from './components/SpecialAnnouncements';
 
 ReactGA.initialize('G-DMVD7BQXK1');
 
@@ -100,11 +100,11 @@ const App = () => {
           <Route path="/" component={HomePage} />
           <Route path="/live" component={LiveLocation} />
           <Route path="/parking" component={ParkingSpaces} />
-          <Route path="/schedule" component={FestivalSchedule} />
+          <Route path="/announcements" component={SpecialAnnouncements} />
           <Route path="/route" component={ProcessionRoute} />
-          <Route path="/events" component={CulturalEvents} />
-          <Route path="/guide" component={FestivalGuide} />
-          <Route path="/gallery" component={PhotoGallery} />
+          <Route path="/spaces" component={LiveViwingSpaces} />
+          <Route path="/importent" component={ImportentPlaces} />
+          {/* <Route path="/gallery" component={PhotoGallery} /> */}
           <Route path="/contact" component={ContactPage} />
         </Routes>
       </main>

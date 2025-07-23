@@ -1,57 +1,57 @@
 import React from 'react';
-import { ChevronRight, Calendar, MapPin, Users, Info, Camera, Clock } from 'lucide-react';
+import { ChevronRight, Calendar, MapPin, Users, Info, Camera, Clock, Car, Navigation } from 'lucide-react';
 
 const HomePage = ({ navigate }) => {
   const cards = [
-    {
-      id: 1,
-      title: "Festival Schedule",
-      description: "View complete schedule of Dalada Perahara ceremonies and processions.",
-      icon: <Calendar className="w-8 h-8" />,
-      color: "from-blue-600 to-blue-800",
-      featured: true,
-      path: '/schedule'
-    },
-    {
-      id: 2,
-      title: "Live parking availability",
-      description: "Live parking space availability during the festival period.",
-      icon: <MapPin className="w-8 h-8" />,
-      color: "from-purple-600 to-purple-800",
-      path: '/parking'
-    },
-    {
-      id: 3,
-      title: "Cultural Events",
-      description: "Traditional dance performances, drumming sessions and cultural activities.",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-green-600 to-green-800",
-      path: '/events'
-    },
-    {
-      id: 4,
-      title: "Festival Guide",
-      description: "Complete guide about the history, significance and traditions of the festival.",
-      icon: <Info className="w-8 h-8" />,
-      color: "from-orange-600 to-orange-800",
-      path: '/guide'
-    },
-    {
-      id: 5,
-      title: "Photo Gallery",
-      description: "Beautiful moments captured from previous Dalada Perahara festivals.",
-      icon: <Camera className="w-8 h-8" />,
-      color: "from-pink-600 to-pink-800",
-      path: '/gallery'
-    },
-    {
-      id: 6,
-      title: "Real-Time Perahera Route",
-      description: "Real-time Perahera location updates during the festival period.",
-      icon: <Clock className="w-8 h-8" />,
-      color: "from-red-600 to-red-800",
-      path: '/live'
-    }
+      {
+        id: 1,
+        title: "Live Perahera Route",
+        description: "Track the real-time procession route and schedule of the Dalada Perahera festival.",
+        icon: <Navigation className="w-8 h-8" />,
+        color: "from-blue-600 to-blue-800",
+        featured: true,
+        path: '/live'
+      },
+      {
+        id: 2,
+        title: "Live Viewing Spaces",
+        description: "Check available spaces along the procession path to watch cultural performances and rituals.",
+        icon: <Users className="w-8 h-8" />,
+        color: "from-green-600 to-green-800",
+        path: '/spaces'
+      },
+      {
+        id: 3,
+        title: "Live Parking Availability",
+        description: "View real-time parking space availability during the Perahera festival.",
+        icon: <Car className="w-8 h-8" />,
+        color: "from-purple-600 to-purple-800",
+        path: '/parking'
+      },
+      {
+        id: 4,
+        title: "Important Places",
+        description: "Explore key locations, historical landmarks, and sites of cultural significance.",
+        icon: <Info className="w-8 h-8" />,
+        color: "from-orange-600 to-orange-800",
+        path: '/importent'
+      },
+      {
+        id: 5,
+        title: "Special Announcements",
+        description: "Stay updated with important festival notices and public announcements.",
+        icon: <Camera className="w-8 h-8" />,
+        color: "from-pink-600 to-pink-800",
+        path: '/announcements'
+      },
+      {
+        id: 6,
+        title: "Daily Perahera Route",
+        description: "Get the daily updated route and schedule of the ongoing Perahera processions.",
+        icon: <Clock className="w-8 h-8" />,
+        color: "from-red-600 to-red-800",
+        path: '/live'
+      }
   ];
 
   return (
