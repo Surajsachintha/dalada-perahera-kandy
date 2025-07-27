@@ -98,9 +98,9 @@ const App = () => {
       <main className="pt-20">
         <Routes>
           <Route path="/" component={HomePage} />
-          <Route path="/live" component={LiveLocation} />
+          {/* <Route path="/live" component={LiveLocation} /> */}
           <Route path="/parking" component={ParkingSpaces} />
-          <Route path="/announcements" component={SpecialAnnouncements} />
+          {/* <Route path="/announcements" component={SpecialAnnouncements} /> */}
           <Route path="/route" component={ProcessionRoute} />
           <Route path="/spaces" component={LiveViwingSpaces} />
           <Route path="/importent" component={ImportentPlaces} />

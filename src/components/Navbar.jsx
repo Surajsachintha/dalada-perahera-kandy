@@ -7,11 +7,11 @@ const Navbar = ({ currentPath, navigate }) => {
 
   const navigationItems = [
     { id: 'home', label: 'Home', icon: <Home className="w-4 h-4" />, path: '/' },
-    { id: 'live', label: 'Live', icon: <Navigation className="w-4 h-4" />, path: '/live' },
+    // { id: 'live', label: 'Live', icon: <Navigation className="w-4 h-4" />, path: '/live' },
     { id: 'spaces', label: 'Spaces', icon: <Users className="w-4 h-4" />, path: '/spaces' },
     { id: 'parking', label: 'Parking', icon: <Car className="w-4 h-4" />, path: '/parking' },
     { id: 'importent', label: 'Importent Places', icon: <Info className="w-4 h-4" />, path: '/importent' },
-    { id: 'announcements', label: 'Announcements', icon: <Calendar className="w-4 h-4" />, path: '/announcements' },
+    // { id: 'announcements', label: 'Announcements', icon: <Calendar className="w-4 h-4" />, path: '/announcements' },
     { id: 'route', label: 'Daily Route', icon: <MapPin className="w-4 h-4" />, path: '/route' },  
     // { id: 'gallery', label: 'Gallery', icon: <Camera className="w-4 h-4" />, path: '/gallery' },
     { id: 'contact', label: 'Contact', icon: <Phone className="w-4 h-4" />, path: '/contact' }

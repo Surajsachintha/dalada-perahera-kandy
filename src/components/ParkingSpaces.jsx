@@ -189,10 +189,10 @@ const ParkingSpaces = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          {/* <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
             Festival Parking Spaces
           </h2>
-          <p className="text-gray-400 text-lg mb-6">Real-time parking availability for Dalada Perahara</p>
+          <p className="text-gray-400 text-lg mb-6">Real-time parking availability for Dalada Perahara</p> */}
           
           {/* Live Status */}
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full">
@@ -234,7 +234,7 @@ const ParkingSpaces = () => {
           </div>
         </div>
 
-        {/* Parking Stats Overview */}
+        {/* Parking Stats Overview
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
             <div className="flex items-center space-x-3">
@@ -275,7 +275,7 @@ const ParkingSpaces = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Parking Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -428,23 +428,6 @@ const ParkingSpaces = () => {
           })}
         </div>
 
-        {/* Emergency Contact */}
-        <div className="mt-12 bg-gray-800 rounded-xl p-6 border border-gray-700">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-2">Need Parking Assistance?</h3>
-            <p className="text-gray-400 mb-4">Contact our parking management team for help</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="flex items-center space-x-2 text-yellow-400">
-                <Phone className="w-5 h-5" />
-                <span className="font-medium">+94 81 222 3456</span>
-              </div>
-              <div className="flex items-center space-x-2 text-blue-400">
-                <Clock className="w-5 h-5" />
-                <span className="font-medium">24/7 Available</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <style jsx>{`
